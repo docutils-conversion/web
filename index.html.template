@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- $Id: index.html.template,v 1.1 2001/07/22 22:42:01 goodger Exp $ -->
+# latest_dps_release = 'dps.0.3.tar.gz'
+<HTML>
+<HEAD>
+   <TITLE>Python Docstring Processing System</TITLE>
+</HEAD>
+<BODY bgcolor="#F0F0FF">
+
+<P><A HREF="http://sf.net/projects/docstring/">
+<IMG SRC="title.png" ALT="Docstring Processing System" BORDER=0 ALIGN=bottom>
+</A></P>
+
+<P><I>last updated: `date`</I></P>
+
+<P>The purpose of the Python Docstring Processing System project is to create
+a standard, modular tool for extracting inline documentation from Python
+modules and converting it into useful formats, such as HTML, XML, and TeX.</P>
+
+<H2>Specification</H2>
+
+<P>The specification consists of: candidate PEPs (<A
+HREF="http://www.python.org/peps/">Python Enhancement Proposals</A>), XML DTDs
+(document type definitions), an XML catalog file, and some notes. All of these
+files are included in the <A
+HREF="http://prdownloads.sourceforge.net/docstring/`latest_dps_release`">latest
+project release package (`latest_dps_release`)</A>, or they can be accessed
+individually below. Note that some of the individual files below may be newer
+than those included in the latest project release package.</P>
+
+<UL>
+
+#  havePEPs = 0
+#> for file in files:
+#      fields, info = scanfile(path, file)
+ <LI><P><A HREF="`path`/`file`">
+     `fields['title']`</A>
+     <BR>`info`
+#>     if fields.has_key('pep'):
+#          havePEPs = 1
+     [<A HREF="http://www.python.org/peps/pep-`('0000%s' % fields['pep'])[-4:]`.html"
+     >PEP `fields['pep']` in master repository</A>]<A HREF="#master">*</A>
+#<
+     </P></LI>
+
+#<
+</UL>
+
+#> if havePEPs:
+<P><A NAME="master">*</A> The PEP titles above are links to local working
+copies, possibly newer than the versions checked in to the 
+<A HREF="http://www.python.org/peps/">master PEP repository</A>.</P>
+
+#<
+<H2>Project Status</H2>
+
+<P>This project consists of a Python package, "<TT>dps</TT>". This contains
+utility modules and three subpackages, <TT>dps.parsers</TT>,
+<TT>dps.formatters</TT>, and <TT>dps.languages</TT>. Each of the
+subpackages will contain further modules or packages implementing
+individual components.</P>
+
+<P>Good progress is being made with regards to the parser interface. The <A
+HREF="dps/statemachine.py"><TT>dps.statemachine</TT></A> module is useful for
+line-based parsing of input text using regular expressions, and is being used
+by the <A HREF="http://structuredtext.sf.net/">reStructuredText</A> input
+parser.</P>
+
+<P>The <A
+HREF="http://prdownloads.sourceforge.net/docstring/`latest_dps_release`">latest
+project release package (`latest_dps_release`)</A> and past project releases
+can be downloaded from the <A
+HREF="http://sf.net/project/showfiles.php?group_id=26626">project files
+page</A>. You can also <A HREF="http://docstring.sf.net/dps/">browse the
+latest source files</A> individually, and read the latest <A
+HREF="http://docstring.sf.net/README.txt">README.txt</A> and <A
+HREF="http://docstring.sf.net/HISTORY.txt">HISTORY.txt</A>.</P>
+
+<H2>Components</H2>
+
+<UL>
+
+ <LI><P>Input Parsers:</P>
+
+  <UL>
+
+   <LI><P>
+   <A HREF="http://structuredtext.sf.net/">reStructuredText</A> input parser
+   </P></LI>
+
+  </UL>
+
+  <P>There's room for competition! Survival of the fittest? Amicable
+  coexistence? Evolution by cross-pollination? Put your ideas into
+  practice!</P>
+
+ </LI>
+
+ <LI><P>Output Formatters:</P>
+
+  <UL>
+
+   <LI><P>Raw XML (corresponding to the DTDs in the spec): built-in.</P></LI>
+
+  </UL>
+
+  <P>Please help develop one!</P>
+
+ </LI>
+
+ <LI><P>Languages:</P>
+
+  <UL>
+
+   <LI><P>English: under development.</P></LI>
+
+  </UL>
+
+  <P>Parlez-vous fran&ccedil;ais? Sprechen ze Deutsch? Nihongo hanasemasu ka?
+  </P>
+
+ </LI>
+
+</UL>
+
+<H2>DPS Wants You!</H2>
+
+<P>This project will only succeed through the combined efforts of many. We're
+looking for contributions of testing, ideas, code, bug reports,
+administration, tasty snacks, computer equipment, and large sums of money. If
+you're interested in participating, please
+<A HREF="mailto:dgoodger@bigfoot.com">contact the project administrator</A>.
+</P>
+
+<H2>Project Info</H2>
+
+<UL>
+
+ <LI><P><A HREF="http://sf.net/projects/docstring/">Python Docstring
+     Processing System project page</A></P></LI>
+
+ <LI><P>Project administrator:
+     <A HREF="mailto:dgoodger@bigfoot.com">David Goodger</A></P></LI>
+
+ <LI><P>Please direct discussions to the
+     <A HREF="http://www.python.org/sigs/doc-sig/">Python Documentation
+     Special Interest Group (Doc-SIG)</A>:
+     <A HREF="mailto:doc-sig@python.org">doc-sig@python.org</A></P></LI>
+
+ <LI><P>Page generated using Alex Martelli's
+     <A HREF="http://aspn.activestate.com/ASPN/Python/Cookbook/Recipe/52305">
+     YAPTU</A> (Yet Another Python Templating Utility)</P></LI>
+
+ <LI><P>Powered by <A href="http://www.python.org/">
+     <IMG src="PyBanner016.png" ALIGN="top" ALT="Python" BORDER="0"></A>
+     </P></LI>
+
+ <LI><P>Hosted by <A href="http://sourceforge.net">
+     <IMG src="http://sourceforge.net/sflogo.php?group_id=26626" width="88"
+          height="31" border="0" alt="SourceForge Logo" ALIGN="top"></A>
+     </P></LI>
+
+</UL>
+
+</BODY>
+</HTML>
