@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# $Id: templater.py,v 1.1 2001/07/22 22:45:03 goodger Exp $
+# $Id: templater.py,v 1.2 2001/08/04 15:06:39 goodger Exp $
 
 import os, sys, time, re, getopt
 #from htmlesc import htmlesc
@@ -34,7 +34,8 @@ class ScanState(State):
 
 def scanfile(path, file):
     ##print >>sys.stderr, 'path=%s, file=%s' % (path, file)
-    inputlines = string2lines(open(os.path.join(path, file)).read())
+    filename = os.path.normpath(os.path.join(path, file))
+    inputlines = string2lines(open(filename).read())
     sm = StateMachine([ScanState], initialstate='ScanState')
     results = sm.run(inputlines)
     fields = {}
@@ -84,7 +85,9 @@ def templater(templatelines, path, files):
     return output
 
 def main(template, path, files):
-    templatelines = open(template).readlines()
+    templatetext = open(template).read()
+    templatetext = templatetext.replace("\r\n", "\n").replace("\r", "\n")
+    templatelines = templatetext.splitlines(1)
     output = templater(templatelines, path, files)
     outputname = template[:template.rfind('.')]
     outputfile = open(outputname, 'w')
