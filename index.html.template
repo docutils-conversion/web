@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<!-- $Id: index.html.template,v 1.4 2001/09/07 02:44:39 goodger Exp $ -->
+<!-- $Id: index.html.template,v 1.5 2002/04/13 16:57:37 goodger Exp $ -->
 #  latest_rst_release = 'rst.0.3.tar.gz'
 #  latest_dps_release = 'dps.0.3.tar.gz'
 <HTML>
@@ -21,8 +21,8 @@ extensibility for specific application domains. It is a candidate markup
 syntax for the <A HREF="http://docstring.sourceforge.net/">Python Docstring
 Processing System</A>. reStructuredText is a revision and reinterpretation of
 the <A HREF="http://dev.zope.org/Members/jim/StructuredTextWiki/FrontPage/"
->StructuredText</A> and <A HREF="http://www.bsdi.com/setext/" >Setext</A>
-lightweight markup systems.</P>
+>StructuredText</A> and <A HREF="http://docutils.sourceforge.net/mirror/setext.html"
+>Setext</A> lightweight markup systems.</P>
 
 <P>The primary goal of the reStructuredText project is to define and implement
 a markup syntax for use in Python docstrings and other documentation domains,
@@ -39,29 +39,12 @@ documented using reStructuredText.</P>
 <P>This project consists of a Python package,
 &ldquo;<TT>dps.parsers.restructuredtext</TT>&rdquo;, a component of the <A
 HREF="http://docstring.sourceforge.net/">Python Docstring Processing System
-(DPS)</A>. The reStructuredText parser is almost complete. Only a few details
-remain to be implemented.</P>
-
-<P>The <A
-HREF="http://prdownloads.sourceforge.net/structuredtext/`latest_rst_release`"
->latest project release package (`latest_rst_release`)</A> and past project
-releases can be downloaded from the <A
-HREF="http://sourceforge.net/project/showfiles.php?group_id=7050">project
-files page</A>. Please also download the <A
-HREF="http://prdownloads.sourceforge.net/docstring/`latest_dps_release`"
->latest DPS package (`latest_dps_release`)</A> which is required by the
-reStructuredText parser. <A
-HREF="http://sourceforge.net/cvs/?group_id=7050">Anonymous CVS access is
-available.</A> You can also <A
-HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/structuredtext/restructuredtext/"
->browse the latest reStructuredText source files (CVS) individually</A>, and
-read the latest <A HREF="README.txt">README.txt</A> and <A
-HREF="HISTORY.txt">HISTORY.txt</A>.</P>
+(DPS)</A>. The reStructuredText parser is functionally complete.</P>
 
 <H3><A NAME="snapshots">Daily Snapshots</A></H3>
 
 <P>Daily snapshots of the project files are also available. They are
-generated automatically from CVS at 24:00 in North America's Eastern
+generated automatically from CVS around midnight in North America's Eastern
 time zone (UTC-0400 from April to October, UTC-0500 from October to
 April). The snapshots should be used with caution, as they may contain
 transient bugs or incompatibilities.</P>
@@ -85,6 +68,27 @@ transient bugs or incompatibilities.</P>
 
 </UL>
 
+<H3><A NAME="releases">Project Releases</A></H3>
+
+<P>Please note that the <A HREF="#snapshots">snapshots</A> above
+contain the latest versions of project files.</P>
+
+<P>The <A
+HREF="http://prdownloads.sourceforge.net/structuredtext/`latest_rst_release`"
+>latest project release package (`latest_rst_release`)</A> and past project
+releases can be downloaded from the <A
+HREF="http://sourceforge.net/project/showfiles.php?group_id=7050">project
+files page</A>. Please also download the <A
+HREF="http://prdownloads.sourceforge.net/docstring/`latest_dps_release`"
+>latest DPS package (`latest_dps_release`)</A> which is required by the
+reStructuredText parser. <A
+HREF="http://sourceforge.net/cvs/?group_id=7050">Anonymous CVS access is
+available.</A> You can also <A
+HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/structuredtext/restructuredtext/"
+>browse the latest reStructuredText source files (CVS) individually</A>, and
+read the latest <A HREF="README.txt">README.txt</A> and <A
+HREF="HISTORY.txt">HISTORY.txt</A>.</P>
+
 <H2>User Documentation</H2>
 
 <P>The user documentation files are located in the <TT>docs</TT> directory of the <A
@@ -96,9 +100,14 @@ HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/structuredtext/r
 >browse the CVS repository</A> directly.</P>
 
 <UL>
+
+ <LI><P><A HREF="docs/quickstart.html">A ReStructuredText Primer</A> (HTML file),
+        and <A HREF="docs/quickstart.txt">A ReStructuredText Primer</A> (text source).
+     </P></LI>
+
  <LI><P><A
      HREF="docs/quickref.html"
-     >Quick reStructuredText</A>
+     >Quick reStructuredText</A> (user reference)
      </P></LI>
 </UL>
 
@@ -125,7 +134,7 @@ HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/structuredtext/r
 
  <LI><P><A
      HREF="spec/alternatives.txt"
-     >Record of reStructuredText Syntax Alternatives</A>
+     >A Record of reStructuredText Syntax Alternatives</A>
      </P></LI>
 
  <LI><P><A
