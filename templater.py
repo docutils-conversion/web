@@ -1,5 +1,5 @@
 #! /usr/bin/env python
-# $Id: templater.py,v 1.2 2001/08/04 15:07:26 goodger Exp $
+# $Id: templater.py,v 1.3 2001/08/23 03:50:21 goodger Exp $
 
 import os, sys, time, re, getopt
 #from htmlesc import htmlesc
@@ -84,7 +84,7 @@ def templater(templatelines, path, files):
     output = copier.copy(templatelines)
     return output
 
-def main(template, path, files):
+def main(template, path=None, files=None):
     templatetext = open(template).read()
     templatetext = templatetext.replace("\r\n", "\n").replace("\r", "\n")
     templatelines = templatetext.splitlines(1)

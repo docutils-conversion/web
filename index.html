@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<!-- $Id: index.html,v 1.2 2001/08/04 15:08:13 goodger Exp $ -->
+<!-- $Id: index.html,v 1.3 2001/08/23 03:49:48 goodger Exp $ -->
 <HTML>
 <HEAD>
    <TITLE>Python Docstring Processing System</TITLE>
@@ -10,7 +10,7 @@
 ><IMG SRC="title.png"
 ALT="Docstring Processing System" BORDER=0 ALIGN=bottom></A></P>
 
-<P><I>last updated: 2001-08-03</I></P>
+<P><I>last updated: 2001-08-22</I></P>
 
 <P>The purpose of the Python Docstring Processing System project is to create
 a standard, modular tool for extracting inline documentation from Python
@@ -24,12 +24,12 @@ contains utility modules and three subpackages, <TT>dps.parsers</TT>,
 will contain further modules or packages implementing individual
 components.</P>
 
-<P>Good progress is being made with regards to the parser interface. The <A
-HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/docstring/dps/dps/statemachine.py?rcontent-type=text/plain"
-><TT>dps.statemachine</TT></A> module is useful for line-based parsing of
-input text using regular expressions, and is being used by the <A
-HREF="http://structuredtext.sourceforge.net/" >reStructuredText</A> input
-parser.</P>
+<P>Good progress is being made with regards to the parser interface.
+The <A HREF="dps/statemachine.py"><TT>dps.statemachine</TT></A> module
+is useful for line-based parsing of input text using regular
+expressions, and is being used by the <A
+HREF="http://structuredtext.sourceforge.net/" >reStructuredText</A>
+input parser.</P>
 
 <P>The <A
 HREF="http://prdownloads.sourceforge.net/docstring/dps.0.3.tar.gz"
@@ -40,62 +40,90 @@ page</A>. <A HREF="http://sourceforge.net/cvs/?group_id=26626">Anonymous CVS
 access is available.</A> You can also <A
 HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/docstring/dps/"
 >browse the latest source files (CVS) individually</A>, and read the latest <A
-HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/docstring/dps/README.txt?rcontent-type=text/plain"
+HREF="README.txt"
 >README.txt</A> and <A
-HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/docstring/dps/HISTORY.txt?rcontent-type=text/plain"
+HREF="HISTORY.txt"
 >HISTORY.txt</A>.</P>
+
+<H3><A NAME="snapshots">Daily Snapshots</A></H3>
+
+<P>Daily snapshots of the project files are also available. They are
+generated automatically from CVS at 24:00 in North America's Eastern
+time zone (UTC-0400 from April to October, UTC-0500 from October to
+April). The snapshots should be used with caution, as they may contain
+transient bugs or incompatibilities.</P>
+
+<UL>
+
+ <LI><P><A
+     HREF="http://docstring.sourceforge.net/dps-snapshot.tgz"
+     >DPS code, tests, and specifications (no user docs yet)</A>
+     </P></LI>
+
+ <LI><P><A
+     HREF="http://structuredtext.sourceforge.net/rst-snapshot.tgz"
+     >reStructuredText code, tests, documentation, and specifications</A>
+     </P></LI>
+
+ <LI><P><A
+     HREF="http://docstring.sourceforge.net/dps-web-snapshot.tgz"
+     >DPS homepage files</A>
+     </P></LI>
+
+</UL>
 
 <H2>Specification</H2>
 
 <P>The specification consists of: candidate PEPs (<A
 HREF="http://www.python.org/peps/">Python Enhancement Proposals</A>), XML DTDs
-(document type definitions), an XML catalog file, and some notes. All of these
-files are included in the <A
+(document type definitions), an XML catalog file, and some notes. All
+of the specification files are located in the <TT>spec</TT> directory
+of the <A
 HREF="http://prdownloads.sourceforge.net/docstring/dps.0.3.tar.gz">latest
 project release package (dps.0.3.tar.gz)</A> (which may not be up to
 date). The up-to-date working documents (from CVS) may be accessed
-individually below. Note that some of the individual files below may be newer
-than those included in the latest project release package. You can also <A
+individually below, or from the <A HREF="#snapshots">snapshots</A> above.
+You can also <A
 HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/docstring/dps/spec/"
 >browse the CVS repository</A> directly.</P>
 
 <UL>
 
- <LI><P><A HREF="../dps/spec/pep-0256.txt">
+ <LI><P><A HREF="spec/pep-0256.txt">
      PEP 256: Docstring Processing System Framework</A>
      <BR>[<A HREF="http://www.python.org/peps/pep-0256.html"
      >PEP 256 in master repository</A>]<A HREF="#master">*</A>
      </P></LI>
 
- <LI><P><A HREF="../dps/spec/pep-0257.txt">
+ <LI><P><A HREF="spec/pep-0257.txt">
      PEP 257: Docstring Conventions</A>
      <BR>[<A HREF="http://www.python.org/peps/pep-0257.html"
      >PEP 257 in master repository</A>]<A HREF="#master">*</A>
      </P></LI>
 
- <LI><P><A HREF="../dps/spec/pep-0258.txt">
+ <LI><P><A HREF="spec/pep-0258.txt">
      PEP 258: DPS Generic Implementation Details</A>
      <BR>[<A HREF="http://www.python.org/peps/pep-0258.html"
      >PEP 258 in master repository</A>]<A HREF="#master">*</A>
      </P></LI>
 
- <LI><P><A HREF="../dps/spec/gpdi.dtd">
+ <LI><P><A HREF="spec/gpdi.dtd">
      Generic Plaintext Document Interface DTD</A>
      </P></LI>
 
- <LI><P><A HREF="../dps/spec/ppdi.dtd">
+ <LI><P><A HREF="spec/ppdi.dtd">
      Python Plaintext Document Interface DTD</A>
      </P></LI>
 
- <LI><P><A HREF="../dps/spec/soextblx.dtd">
+ <LI><P><A HREF="spec/soextblx.dtd">
      OASIS XML Exchange Table Model Declaration Module</A>
      </P></LI>
 
- <LI><P><A HREF="../dps/spec/dps.cat">
+ <LI><P><A HREF="spec/dps.cat">
      Python Docstring Processing System Catalog Data</A>
      </P></LI>
 
- <LI><P><A HREF="../dps/spec/dps-notes.txt">
+ <LI><P><A HREF="spec/dps-notes.txt">
      Notes</A>
      </P></LI>
 
@@ -104,6 +132,7 @@ HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/docstring/dps/sp
 <P><A NAME="master">*</A> The PEP titles above are links to local working
 copies, possibly newer than the versions checked in to the 
 <A HREF="http://www.python.org/peps/">master PEP repository</A>.</P>
+
 
 <H2>Components</H2>
 
@@ -154,12 +183,12 @@ copies, possibly newer than the versions checked in to the
 
 <H2>DPS Wants You!</H2>
 
-<P>This project will only succeed through the combined efforts of many. We're
-looking for contributions of testing, ideas, code, bug reports,
-administration, tasty snacks, computer equipment, and large sums of money. If
-you're interested in participating, please
-<A HREF="mailto:dgoodger@bigfoot.com">contact the project administrator</A>.
-</P>
+<P>This project will only succeed through the combined efforts of
+many. We're looking for contributions of testing, ideas, code, bug
+reports, administration, tasty snacks, computer equipment, and large
+sums of money. If you're interested in participating, please <A
+HREF="mailto:goodger@users.sourceforge.net">contact the project
+administrator</A>.</P>
 
 <H2>Project Info</H2>
 
@@ -174,7 +203,7 @@ you're interested in participating, please
      >Docstring Processing System CVS repository</A></P></LI>
 
  <LI><P>Project administrator:
-     <A HREF="mailto:dgoodger@bigfoot.com">David Goodger</A></P></LI>
+     <A HREF="mailto:goodger@users.sourceforge.net">David Goodger</A></P></LI>
 
  <LI><P>Please direct discussions to the
      <A HREF="http://www.python.org/sigs/doc-sig/">Python Documentation
