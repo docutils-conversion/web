@@ -1,5 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<!-- $Id: index.html,v 1.5 2002/04/13 16:57:18 goodger Exp $ -->
+<!-- $Id: index-old.html.template,v 1.1 2002/04/21 15:42:41 goodger Exp $ -->
+#  latest_rst_release = 'restructuredtext-0.4.tar.gz'
+#  latest_dps_release = 'dps-0.4.tar.gz'
 <HTML>
 <HEAD>
    <TITLE>reStructuredText</TITLE>
@@ -9,7 +11,12 @@
 <P><A HREF="http://sourceforge.net/projects/structuredtext/" 
 ><IMG SRC="title.png" ALT="reStructuredText" BORDER=0 ALIGN=bottom></A></P>
 
-<P><I>last updated: 2002-04-12</I></P>
+<P><FONT color="red">This project is now <B>inactive</B>.  All
+development has been taken over by the <A
+HREF="http://docutils.sourceforge.het/">Docutils</A>
+project.</FONT></P>
+
+<P><I>last updated: `date`</I></P>
 
 <P>reStructuredText is an easy-to-read, what-you-see-is-what-you-get plaintext
 markup syntax and parser system. It is useful for in-line program
@@ -34,63 +41,70 @@ documented using reStructuredText.</P>
 
 <H2>Project Status</H2>
 
+<P>This project is now <B>inactive</B>.  All development has been
+taken over by the <A
+HREF="http://docutils.sourceforge.het/">Docutils</A> project.</P>
+
 <P>This project consists of a Python package,
 &ldquo;<TT>dps.parsers.restructuredtext</TT>&rdquo;, a component of the <A
 HREF="http://docstring.sourceforge.net/">Python Docstring Processing System
 (DPS)</A>. The reStructuredText parser is functionally complete.</P>
 
-<H3><A NAME="snapshots">Daily Snapshots</A></H3>
+<H3><A NAME="snapshots">CVS Snapshots</A></H3>
 
-<P>Daily snapshots of the project files are also available. They are
-generated automatically from CVS around midnight in North America's Eastern
-time zone (UTC-0400 from April to October, UTC-0500 from October to
-April). The snapshots should be used with caution, as they may contain
-transient bugs or incompatibilities.</P>
+<P>The final CVS snapshots are available below:</P>
 
 <UL>
 
  <LI><P><A
      HREF="http://structuredtext.sourceforge.net/rst-snapshot.tgz"
-     >reStructuredText code, tests, documentation, and specifications</A>
-     </P></LI>
+     >reStructuredText code, tests, documentation, and specifications</A>.
+     Except for a few typos, this is equivalent to the final release
+     package.</P></LI>
 
  <LI><P><A
      HREF="http://docstring.sourceforge.net/dps-snapshot.tgz"
      >DPS code, tests, and specifications (no user docs yet)</A>
-     </P></LI>
+     Except for a few typos, this is equivalent to the final release
+     package.</P></LI>
 
  <LI><P><A
      HREF="http://structuredtext.sourceforge.net/rst-web-snapshot.tgz"
      >reStructuredText homepage files</A>
      </P></LI>
 
+ <LI><P><A
+     HREF="http://structuredtext.sourceforge.net/rst-sandbox-snapshot.tgz"
+     >reStructuredText Sandbox files</A>
+     </P></LI>
+
 </UL>
 
 <H3><A NAME="releases">Project Releases</A></H3>
 
-<P>Please note that the <A HREF="#snapshots">snapshots</A> above
-contain the latest versions of project files.</P>
+<P>Development has been suspended at this site.  All new development is
+taking place at the <A HREF="http://docutils.sourceforge.net">Docutils</A>
+project.</P>
 
 <P>The <A
-HREF="http://prdownloads.sourceforge.net/structuredtext/rst.0.3.tar.gz"
->latest project release package (rst.0.3.tar.gz)</A> and past project
+HREF="http://prdownloads.sourceforge.net/structuredtext/`latest_rst_release`"
+>final project release package (`latest_rst_release`)</A> and past project
 releases can be downloaded from the <A
 HREF="http://sourceforge.net/project/showfiles.php?group_id=7050">project
-files page</A>. Please also download the <A
-HREF="http://prdownloads.sourceforge.net/docstring/dps.0.3.tar.gz"
->latest DPS package (dps.0.3.tar.gz)</A> which is required by the
-reStructuredText parser. <A
+files page</A>. The <A
+HREF="http://prdownloads.sourceforge.net/docstring/`latest_dps_release`"
+>final DPS package (`latest_dps_release`)</A> is also required. <A
 HREF="http://sourceforge.net/cvs/?group_id=7050">Anonymous CVS access is
 available.</A> You can also <A
 HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/structuredtext/restructuredtext/"
 >browse the latest reStructuredText source files (CVS) individually</A>, and
-read the latest <A HREF="README.txt">README.txt</A> and <A
-HREF="HISTORY.txt">HISTORY.txt</A>.</P>
+read the final <A HREF="README.html">README</A> and <A
+HREF="HISTORY.html">HISTORY</A> files.</P>
 
 <H2>User Documentation</H2>
 
 <P>The user documentation files are located in the <TT>docs</TT> directory of the <A
-HREF="http://prdownloads.sourceforge.net/structuredtext/rst.0.3.tar.gz"
+HREF="http://prdownloads.sourceforge.net/structuredtext/`latest_rst_release`"
 >latest project release package</A> (which may not be up to date). The
 up-to-date working documents (from CVS) may be accessed individually below,
 or from the <A HREF="#snapshots">snapshots</A> above. You can also <A
@@ -112,7 +126,7 @@ HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/structuredtext/r
 <H2>Specification</H2>
 
 <P>All of the specification files are located in the <TT>spec</TT> directory of the <A
-HREF="http://prdownloads.sourceforge.net/structuredtext/rst.0.3.tar.gz"
+HREF="http://prdownloads.sourceforge.net/structuredtext/`latest_rst_release`"
 >latest project release package</A> (which may not be up to date). The
 up-to-date working documents (from CVS) may be accessed individually below,
 or from the <A HREF="#snapshots">snapshots</A> above. You can also <A
