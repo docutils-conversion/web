@@ -1,20 +1,49 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<!-- $Id: index.html,v 1.1 2001/07/22 22:41:50 goodger Exp $ -->
+<!-- $Id: index.html,v 1.2 2001/08/04 15:08:13 goodger Exp $ -->
 <HTML>
 <HEAD>
    <TITLE>Python Docstring Processing System</TITLE>
 </HEAD>
 <BODY bgcolor="#F0F0FF">
 
-<P><A HREF="http://sf.net/projects/docstring/">
-<IMG SRC="title.png" ALT="Docstring Processing System" BORDER=0 ALIGN=bottom>
-</A></P>
+<P><A HREF="http://sourceforge.net/projects/docstring/"
+><IMG SRC="title.png"
+ALT="Docstring Processing System" BORDER=0 ALIGN=bottom></A></P>
 
-<P><I>last updated: 2001-07-20</I></P>
+<P><I>last updated: 2001-08-03</I></P>
 
 <P>The purpose of the Python Docstring Processing System project is to create
 a standard, modular tool for extracting inline documentation from Python
 modules and converting it into useful formats, such as HTML, XML, and TeX.</P>
+
+<H2>Project Status</H2>
+
+<P>This project consists of a Python package, &ldquo;<TT>dps</TT>&rdquo;. This
+contains utility modules and three subpackages, <TT>dps.parsers</TT>,
+<TT>dps.formatters</TT>, and <TT>dps.languages</TT>. Each of the subpackages
+will contain further modules or packages implementing individual
+components.</P>
+
+<P>Good progress is being made with regards to the parser interface. The <A
+HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/docstring/dps/dps/statemachine.py?rcontent-type=text/plain"
+><TT>dps.statemachine</TT></A> module is useful for line-based parsing of
+input text using regular expressions, and is being used by the <A
+HREF="http://structuredtext.sourceforge.net/" >reStructuredText</A> input
+parser.</P>
+
+<P>The <A
+HREF="http://prdownloads.sourceforge.net/docstring/dps.0.3.tar.gz"
+>latest project release package (dps.0.3.tar.gz)</A> and past project
+releases can be downloaded from the <A
+HREF="http://sourceforge.net/project/showfiles.php?group_id=26626" >project files
+page</A>. <A HREF="http://sourceforge.net/cvs/?group_id=26626">Anonymous CVS
+access is available.</A> You can also <A
+HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/docstring/dps/"
+>browse the latest source files (CVS) individually</A>, and read the latest <A
+HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/docstring/dps/README.txt?rcontent-type=text/plain"
+>README.txt</A> and <A
+HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/docstring/dps/HISTORY.txt?rcontent-type=text/plain"
+>HISTORY.txt</A>.</P>
 
 <H2>Specification</H2>
 
@@ -23,56 +52,51 @@ HREF="http://www.python.org/peps/">Python Enhancement Proposals</A>), XML DTDs
 (document type definitions), an XML catalog file, and some notes. All of these
 files are included in the <A
 HREF="http://prdownloads.sourceforge.net/docstring/dps.0.3.tar.gz">latest
-project release package (dps.0.3.tar.gz)</A>, or they can be accessed
+project release package (dps.0.3.tar.gz)</A> (which may not be up to
+date). The up-to-date working documents (from CVS) may be accessed
 individually below. Note that some of the individual files below may be newer
-than those included in the latest project release package.</P>
+than those included in the latest project release package. You can also <A
+HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/docstring/dps/spec/"
+>browse the CVS repository</A> directly.</P>
 
 <UL>
 
- <LI><P><A HREF="spec/pep-0256.txt">
+ <LI><P><A HREF="../dps/spec/pep-0256.txt">
      PEP 256: Docstring Processing System Framework</A>
-     <BR>Date: 2001-07-19. Version: 1.1.1.2. Status: Draft.
-     [<A HREF="http://www.python.org/peps/pep-0256.html"
+     <BR>[<A HREF="http://www.python.org/peps/pep-0256.html"
      >PEP 256 in master repository</A>]<A HREF="#master">*</A>
      </P></LI>
 
- <LI><P><A HREF="spec/pep-0257.txt">
+ <LI><P><A HREF="../dps/spec/pep-0257.txt">
      PEP 257: Docstring Conventions</A>
-     <BR>Date: 2001-07-19. Version: 1.2.1.1. Status: Draft.
-     [<A HREF="http://www.python.org/peps/pep-0257.html"
+     <BR>[<A HREF="http://www.python.org/peps/pep-0257.html"
      >PEP 257 in master repository</A>]<A HREF="#master">*</A>
      </P></LI>
 
- <LI><P><A HREF="spec/pep-0258.txt">
+ <LI><P><A HREF="../dps/spec/pep-0258.txt">
      PEP 258: DPS Generic Implementation Details</A>
-     <BR>Date: 2001-07-19. Version: 1.1.1.3. Status: Draft.
-     [<A HREF="http://www.python.org/peps/pep-0258.html"
+     <BR>[<A HREF="http://www.python.org/peps/pep-0258.html"
      >PEP 258 in master repository</A>]<A HREF="#master">*</A>
      </P></LI>
 
- <LI><P><A HREF="spec/gpdi.dtd">
+ <LI><P><A HREF="../dps/spec/gpdi.dtd">
      Generic Plaintext Document Interface DTD</A>
-     <BR>Date: 2001-07-19. Version: 0.2.
      </P></LI>
 
- <LI><P><A HREF="spec/ppdi.dtd">
+ <LI><P><A HREF="../dps/spec/ppdi.dtd">
      Python Plaintext Document Interface DTD</A>
-     <BR>Date: 2001-05-29. Version: 0.1.
      </P></LI>
 
- <LI><P><A HREF="spec/soextblx.dtd">
+ <LI><P><A HREF="../dps/spec/soextblx.dtd">
      OASIS XML Exchange Table Model Declaration Module</A>
-     <BR>Date: 1999-03-15.
      </P></LI>
 
- <LI><P><A HREF="spec/dps.cat">
+ <LI><P><A HREF="../dps/spec/dps.cat">
      Python Docstring Processing System Catalog Data</A>
-     <BR>Date: 2001-05-29. Version: 0.1.
      </P></LI>
 
- <LI><P><A HREF="spec/dps-notes.txt">
+ <LI><P><A HREF="../dps/spec/dps-notes.txt">
      Notes</A>
-     <BR>Date: 2001-07-19. Revision: 1.7.
      </P></LI>
 
 </UL>
@@ -80,30 +104,6 @@ than those included in the latest project release package.</P>
 <P><A NAME="master">*</A> The PEP titles above are links to local working
 copies, possibly newer than the versions checked in to the 
 <A HREF="http://www.python.org/peps/">master PEP repository</A>.</P>
-
-<H2>Project Status</H2>
-
-<P>This project consists of a Python package, "<TT>dps</TT>". This contains
-utility modules and three subpackages, <TT>dps.parsers</TT>,
-<TT>dps.formatters</TT>, and <TT>dps.languages</TT>. Each of the
-subpackages will contain further modules or packages implementing
-individual components.</P>
-
-<P>Good progress is being made with regards to the parser interface. The <A
-HREF="dps/statemachine.py"><TT>dps.statemachine</TT></A> module is useful for
-line-based parsing of input text using regular expressions, and is being used
-by the <A HREF="http://structuredtext.sf.net/">reStructuredText</A> input
-parser.</P>
-
-<P>The <A
-HREF="http://prdownloads.sourceforge.net/docstring/dps.0.3.tar.gz">latest
-project release package (dps.0.3.tar.gz)</A> and past project releases
-can be downloaded from the <A
-HREF="http://sf.net/project/showfiles.php?group_id=26626">project files
-page</A>. You can also <A HREF="http://docstring.sf.net/dps/">browse the
-latest source files</A> individually, and read the latest <A
-HREF="http://docstring.sf.net/README.txt">README.txt</A> and <A
-HREF="http://docstring.sf.net/HISTORY.txt">HISTORY.txt</A>.</P>
 
 <H2>Components</H2>
 
@@ -114,7 +114,7 @@ HREF="http://docstring.sf.net/HISTORY.txt">HISTORY.txt</A>.</P>
   <UL>
 
    <LI><P>
-   <A HREF="http://structuredtext.sf.net/">reStructuredText</A> input parser
+     <A HREF="http://structuredtext.sourceforge.net/">reStructuredText</A>
    </P></LI>
 
   </UL>
@@ -165,8 +165,13 @@ you're interested in participating, please
 
 <UL>
 
- <LI><P><A HREF="http://sf.net/projects/docstring/">Python Docstring
+ <LI><P>Bug reports, patches, feature requests, mailing lists, news: <A
+     HREF="http://sourceforge.net/projects/docstring/" >Python Docstring
      Processing System project page</A></P></LI>
+
+ <LI><P><A
+     HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/docstring/dps/"
+     >Docstring Processing System CVS repository</A></P></LI>
 
  <LI><P>Project administrator:
      <A HREF="mailto:dgoodger@bigfoot.com">David Goodger</A></P></LI>
