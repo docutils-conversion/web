@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<!-- $Id: index.html.template,v 1.5 2002/04/13 16:59:57 goodger Exp $ -->
-# latest_dps_release = 'dps.0.3.tar.gz'
-#  latest_rst_release = 'rst.0.3.tar.gz'
+<!-- $Id: index-old.html.template,v 1.1 2002/04/21 15:40:06 goodger Exp $ -->
+#  latest_dps_release = 'dps-0.4.tar.gz'
+#  latest_rst_release = 'restructuredtext-0.4.tar.gz'
 <HTML>
 <HEAD>
    <TITLE>Python Docstring Processing System</TITLE>
@@ -12,6 +12,11 @@
 ><IMG SRC="title.png"
 ALT="Docstring Processing System" BORDER=0 ALIGN=bottom></A></P>
 
+<P><FONT color="red">This project is now <B>inactive</B>.  All
+development has been taken over by the <A
+HREF="http://docutils.sourceforge.het/">Docutils</A>
+project.</FONT></P>
+
 <P><I>last updated: `date`</I></P>
 
 <P>The purpose of the Python Docstring Processing System project is to create
@@ -19,6 +24,10 @@ a standard, modular tool for extracting inline documentation from Python
 modules and converting it into useful formats, such as HTML, XML, and TeX.</P>
 
 <H2>Project Status</H2>
+
+<P>This project is now <B>inactive</B>.  All development has been
+taken over by the <A
+HREF="http://docutils.sourceforge.het/">Docutils</A> project.</P>
 
 <P>This project consists of a Python package, &ldquo;<TT>dps</TT>&rdquo;. This
 contains utility modules and three subpackages, <TT>dps.parsers</TT>,
@@ -33,25 +42,23 @@ expressions, and is being used by the <A
 HREF="http://structuredtext.sourceforge.net/" >reStructuredText</A>
 input parser.</P>
 
-<H3><A NAME="snapshots">Daily Snapshots</A></H3>
+<H3><A NAME="snapshots">CVS Snapshots</A></H3>
 
-<P>Daily snapshots of the project files are also available. They are
-generated automatically from CVS at 24:00 in North America's Eastern
-time zone (UTC-0400 from April to October, UTC-0500 from October to
-April). The snapshots should be used with caution, as they may contain
-transient bugs or incompatibilities.</P>
+<P>The final CVS snapshots are available below:</P>
 
 <UL>
 
  <LI><P><A
      HREF="http://docstring.sourceforge.net/dps-snapshot.tgz"
      >DPS code, tests, and specifications (no user docs yet)</A>
-     </P></LI>
+     Except for a few typos, this is equivalent to the final release
+     package.</P></LI>
 
  <LI><P><A
      HREF="http://structuredtext.sourceforge.net/rst-snapshot.tgz"
      >reStructuredText code, tests, documentation, and specifications</A>
-     </P></LI>
+     Except for a few typos, this is equivalent to the final release
+     package.</P></LI>
 
  <LI><P><A
      HREF="http://docstring.sourceforge.net/dps-web-snapshot.tgz"
@@ -62,26 +69,26 @@ transient bugs or incompatibilities.</P>
 
 <H3><A NAME="releases">Project Releases</A></H3>
 
-<P>Please note that the <A HREF="#snapshots">daily snapshots</A> above
-contain the latest versions of project files.</P>
+<P>Development has been suspended at this site.  All new development is
+taking place at the <A HREF="http://docutils.sourceforge.net">Docutils</A>
+project.</P>
 
 <P>The <A
 HREF="http://prdownloads.sourceforge.net/docstring/`latest_dps_release`"
->latest project release package (`latest_dps_release`)</A> and past project
+>final project release package (`latest_dps_release`)</A> and past project
 releases can be downloaded from the <A
 HREF="http://sourceforge.net/project/showfiles.php?group_id=26626" >project files
-page</A>.  Please also download the <A
+page</A>.  The <A
 HREF="http://prdownloads.sourceforge.net/structuredtext/`latest_rst_release`"
->latest RST package (`latest_rst_release`)</A> which contains the
-reStructuredText parser. <A
+>final reStructuredText package (`latest_rst_release`)</A> is also required. <A
  HREF="http://sourceforge.net/cvs/?group_id=26626">Anonymous CVS
 access is available.</A> You can also <A
 HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/docstring/dps/"
->browse the latest source files (CVS) individually</A>, and read the latest <A
-HREF="README.txt"
->README.txt</A> and <A
-HREF="HISTORY.txt"
->HISTORY.txt</A>.</P>
+>browse the latest source files (CVS) individually</A>, and read the final <A
+HREF="README.html"
+>README</A> and <A
+HREF="HISTORY.html"
+>HISTORY</A> files.</P>
 
 <H2>Specification</H2>
 
