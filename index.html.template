@@ -1,6 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<!-- $Id: index.html.template,v 1.4 2001/09/07 02:45:07 goodger Exp $ -->
+<!-- $Id: index.html.template,v 1.5 2002/04/13 16:59:57 goodger Exp $ -->
 # latest_dps_release = 'dps.0.3.tar.gz'
+#  latest_rst_release = 'rst.0.3.tar.gz'
 <HTML>
 <HEAD>
    <TITLE>Python Docstring Processing System</TITLE>
@@ -32,20 +33,6 @@ expressions, and is being used by the <A
 HREF="http://structuredtext.sourceforge.net/" >reStructuredText</A>
 input parser.</P>
 
-<P>The <A
-HREF="http://prdownloads.sourceforge.net/docstring/`latest_dps_release`"
->latest project release package (`latest_dps_release`)</A> and past project
-releases can be downloaded from the <A
-HREF="http://sourceforge.net/project/showfiles.php?group_id=26626" >project files
-page</A>. <A HREF="http://sourceforge.net/cvs/?group_id=26626">Anonymous CVS
-access is available.</A> You can also <A
-HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/docstring/dps/"
->browse the latest source files (CVS) individually</A>, and read the latest <A
-HREF="README.txt"
->README.txt</A> and <A
-HREF="HISTORY.txt"
->HISTORY.txt</A>.</P>
-
 <H3><A NAME="snapshots">Daily Snapshots</A></H3>
 
 <P>Daily snapshots of the project files are also available. They are
@@ -72,6 +59,29 @@ transient bugs or incompatibilities.</P>
      </P></LI>
 
 </UL>
+
+<H3><A NAME="releases">Project Releases</A></H3>
+
+<P>Please note that the <A HREF="#snapshots">daily snapshots</A> above
+contain the latest versions of project files.</P>
+
+<P>The <A
+HREF="http://prdownloads.sourceforge.net/docstring/`latest_dps_release`"
+>latest project release package (`latest_dps_release`)</A> and past project
+releases can be downloaded from the <A
+HREF="http://sourceforge.net/project/showfiles.php?group_id=26626" >project files
+page</A>.  Please also download the <A
+HREF="http://prdownloads.sourceforge.net/structuredtext/`latest_rst_release`"
+>latest RST package (`latest_rst_release`)</A> which contains the
+reStructuredText parser. <A
+ HREF="http://sourceforge.net/cvs/?group_id=26626">Anonymous CVS
+access is available.</A> You can also <A
+HREF="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/~checkout~/docstring/dps/"
+>browse the latest source files (CVS) individually</A>, and read the latest <A
+HREF="README.txt"
+>README.txt</A> and <A
+HREF="HISTORY.txt"
+>HISTORY.txt</A>.</P>
 
 <H2>Specification</H2>
 
@@ -143,7 +153,22 @@ copies, possibly newer than the versions checked in to the
 
 <UL>
 
- <LI><P>Input Parsers:</P>
+ <LI><P>Input Context Readers:</P>
+
+  <UL>
+
+   <LI><P>For standalone input files: <A
+       HREF="http://docstring.sourceforge.net/dps/readers/standalone.py"
+       ><TT>dps.readers.standalone</TT></A>
+   </P></LI>
+
+   <LI><P>More to be implemented: Python Source, Email, PEP, Wiki, 
+          Web Page, FAQ.
+   </P></LI>
+
+  </UL>
+
+ <LI><P>Parsers:</P>
 
   <UL>
 
@@ -159,11 +184,23 @@ copies, possibly newer than the versions checked in to the
 
  </LI>
 
- <LI><P>Output Formatters:</P>
+ <LI><P>Output Format Writers:</P>
 
   <UL>
 
    <LI><P>Raw XML (corresponding to the DTDs in the spec): built-in.</P></LI>
+
+   <LI><P>Pretty-printed pseudo-XML: <A 
+       HREF="http://docstring.sourceforge.net/dps/writers/pprint.py"
+       ><TT>dps.writers.pprint</TT></A>.</P></LI>
+
+   <LI><P>HTML 4.01 (loose) for CSS-1 stylesheets: <A 
+       HREF="http://docstring.sourceforge.net/dps/writers/html.py"
+       ><TT>dps.writers.html</TT></A>.</P></LI>
+
+   <LI><P>More to be implemented: other forms of XML (DocBook etc.),
+          HTML 3.2, TeX, plain text, maybe even reStructuredText.
+   </P></LI>
 
   </UL>
 
